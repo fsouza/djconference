@@ -45,3 +45,9 @@ class CoreTestCase(MockerTestCase):
 
     def teardown(self):
         self.tearDown()
+
+class FunctionalCoreTestCase(CoreTestCase):
+
+    def setup(self):
+        super(FunctionalCoreTestCase, self).setup()
+        self.client = Client()
