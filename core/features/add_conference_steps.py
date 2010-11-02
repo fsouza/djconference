@@ -13,7 +13,8 @@ def when_i_fill_the_conference_field_with_value(step, field_name, value):
 
 @step(u'I click on "(.*)" button')
 def and_i_click_on_button(step, button_label):
-    assert False, 'This step must be implemented'
+    button = world.browser.find_element_by_xpath('//input[@type="submit" and @value="%s"]' % button_label)
+    button.click()
 
 @step(u'the conference "(.*)" should be in the database')
 def then_the_conference_group1_should_be_in_the_database(step, group1):
