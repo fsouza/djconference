@@ -12,7 +12,7 @@ functional: clean
 	@specloud --with-coverage --cover-package=$(app) --with-django --verbose --nocapture --where=$(app)/tests/functional
 
 unit: clean
-	@specloud --with-coverage --verbose --nocapture --where=$(app)/tests/unit
+	@specloud --with-coverage --cover-package=$(app) --with-django --verbose --nocapture --where=$(app)/tests/unit
 
 bootstrap:
 	@pip install -r requirements.txt
