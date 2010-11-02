@@ -3,7 +3,7 @@ from core.models import Conference
 from django.db import IntegrityError
 from nose.tools import raises
 
-class TestModels(mocker.MockerTestCase):
+class TestConferenceModels(mocker.MockerTestCase):
 
     def _get_conference(self, title = None, description = None):
         conference = Conference(title = title, description = description)
