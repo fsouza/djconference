@@ -1,4 +1,5 @@
 # Create your views here.
+from core.models import Conference
 from core.forms import ConferenceForm
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -13,6 +14,13 @@ def new_conference(request):
             form.save()
             return HttpResponseRedirect(reverse('list_conferences'))
     return render_to_response('new_conference.html', {
-        'form' : form
+            'form' : form
+        }, context_instance=RequestContext(request)
+    )
+
+def list_conferences(request):
+    conferences = Conference.objects.all()
+    return render_to_response('conferences.html', {
+            'conferences' : conferences
         }, context_instance=RequestContext(request)
     )
