@@ -1,9 +1,10 @@
 import mocker
+from core.tests import CoreTestCase
 from core.models import Conference
 from django.db import IntegrityError
 from nose.tools import raises
 
-class TestConferenceModels(mocker.MockerTestCase):
+class TestConferenceModels(CoreTestCase):
 
     def _get_conference(self, title = None, description = None):
         conference = Conference(title = title, description = description)

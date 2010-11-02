@@ -1,5 +1,6 @@
 from django.test import Client
 from django.core.handlers.wsgi import WSGIRequest
+from mocker import MockerTestCase
 
 class RequestFactory(Client):
     """
@@ -36,3 +37,11 @@ class RequestFactory(Client):
         environ.update(self.defaults)
         environ.update(request)
         return WSGIRequest(environ)
+
+class CoreTestCase(MockerTestCase):
+
+    def setup(self):
+        self.setUp()
+
+    def teardown(self):
+        self.tearDown()
