@@ -3,16 +3,16 @@ app=core
 all: tests acceptance
 
 tests:
-	@specloud --with-coverage --cover-package=$(app) --with-django --verbose --nocapture --where=$(app)/tests
+	@specloud --with-coverage --cover-package=$(app) --with-django --django-sqlite --verbose --nocapture --where=$(app)/tests
 
 acceptance: clean
 	@python manage.py harvest
 
 functional: clean
-	@specloud --with-coverage --cover-package=$(app) --with-django --verbose --nocapture --where=$(app)/tests/functional
+	@specloud --with-coverage --cover-package=$(app) --with-django --django-sqlite --verbose --nocapture --where=$(app)/tests/functional
 
 unit: clean
-	@specloud --with-coverage --cover-package=$(app) --with-django --verbose --nocapture --where=$(app)/tests/unit
+	@specloud --with-coverage --cover-package=$(app) --with-django --django-sqlite --verbose --nocapture --where=$(app)/tests/unit
 
 bootstrap:
 	@pip install -r requirements.txt
