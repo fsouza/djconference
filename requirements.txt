@@ -2,6 +2,7 @@ nose
 selenium
 specloud
 coverage
+MySQL-python
 http://darcs.idyll.org/~t/projects/pinocchio-latest.tar.gz
 -e git+http://github.com/inoi/nosedjango.git#egg=nosedjango
 -e git+http://github.com/franciscosouza/lettuce.git#egg=lettuce
