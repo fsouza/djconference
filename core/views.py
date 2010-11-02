@@ -12,7 +12,7 @@ def new_conference(request):
         form = ConferenceForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('list_conferences'))
+            return HttpResponseRedirect(reverse('core.views.list_conferences'))
     return render_to_response('new_conference.html', {
             'form' : form
         }, context_instance=RequestContext(request)
