@@ -4,6 +4,7 @@ specloud
 coverage
 MySQL-python
 mocker
+lxml
 http://darcs.idyll.org/~t/projects/pinocchio-latest.tar.gz
 -e git+http://github.com/inoi/nosedjango.git#egg=nosedjango
 -e git+http://github.com/franciscosouza/lettuce.git#egg=lettuce
