@@ -6,7 +6,7 @@ tests:
 	@specloud --with-coverage --cover-package=$(app) --with-django --django-sqlite --verbose --nocapture --where=$(app)/tests
 
 acceptance: clean
-	@python manage.py harvest
+	@python manage.py harvest -d
 
 functional: clean
 	@specloud --with-coverage --cover-package=$(app) --with-django --django-sqlite --verbose --nocapture --where=$(app)/tests/functional
