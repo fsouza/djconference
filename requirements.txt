@@ -1,0 +1,6 @@
+nose
+selenium
+specloud
+http://darcs.idyll.org/~t/projects/pinocchio-latest.tar.gz
+-e git+http://github.com/inoi/nosedjango.git
+-e git+http://github.com/franciscosouza/lettuce.git
