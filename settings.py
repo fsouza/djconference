@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'core',
     'lettuce.django',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
