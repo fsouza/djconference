@@ -40,14 +40,20 @@ class RequestFactory(Client):
 
 class CoreTestCase(MockerTestCase):
 
+    def setUp(self):
+        super(CoreTestCase, self).setUp()
+        self.setup()
+
+    def tearDown(self):
+        super(CoreTestCase, self).tearDown()
+
     def setup(self):
-        self.setUp()
+        pass
 
     def teardown(self):
-        self.tearDown()
+        pass
 
 class FunctionalCoreTestCase(CoreTestCase):
 
     def setup(self):
-        super(FunctionalCoreTestCase, self).setup()
         self.client = Client()
