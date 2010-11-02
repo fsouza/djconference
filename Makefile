@@ -1,3 +1,6 @@
+acceptance:
+	@python manage.py harvest
+
 bootstrap:
 	@pip install -r requirements.txt
 
