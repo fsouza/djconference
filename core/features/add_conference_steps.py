@@ -25,7 +25,7 @@ def then_the_conference_registered_should_be_in_the_database(step, conference_na
 
 @step(u'I should be redirected to the conferences list page')
 def and_i_should_be_redirected_to_the_conferences_list_page(step):
-    assert_equals(world.browser.get_current_url(), django_url('/conferences'))
+    assert_equals(world.browser.get_current_url(), django_url('/conferences/'))
 
 @step(u'the conference "(.*)" should appear in the list')
 def and_the_conference_group1_should_appear_in_the_list(step, group1):
