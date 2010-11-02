@@ -1,4 +1,3 @@
-import mocker
 from core.tests import CoreTestCase
 from core.models import Conference
 from django.db import IntegrityError
