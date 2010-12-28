@@ -1,9 +1,9 @@
 from lettuce import before, after, world
-from selenium import get_driver, FIREFOX
+from selenium.firefox.webdriver import WebDriver
 
 @before.all
 def setup_selenium():
-    world.browser = get_driver(FIREFOX, profile='selenium')
+    world.browser = WebDriver(profile='selenium')
 
 @after.all
 def teardown_selenium(total):
